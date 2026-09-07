@@ -1,0 +1,134 @@
+[
+  {
+    "id": "1",
+    "titulo": "Pessoa Desenvolvedora Front-end Júnior",
+    "empresa": "Aurora Tech",
+    "empresaSlug": "aurora-tech",
+    "area": "Front-end",
+    "senioridade": "Júnior",
+    "local": "Remoto",
+    "aceitaIniciante": true,
+    "descricao": "Você vai trabalhar com React e Next.js num time de produto que já está no ar, pareando com gente mais experiente nas primeiras semanas e assumindo telas inteiras depois. O dia a dia é ler o código dos outros, abrir pull request pequeno e conversar com quem desenha. Não exigimos experiência anterior em empresa: exigimos vontade de aprender em público e de pedir ajuda antes de travar dois dias."
+  },
+  {
+    "id": "2",
+    "titulo": "Analista de Dados Júnior",
+    "empresa": "Aurora Tech",
+    "empresaSlug": "aurora-tech",
+    "area": "Dados",
+    "senioridade": "Júnior",
+    "local": "Híbrido · Recife",
+    "aceitaIniciante": true,
+    "descricao": "O time de dados cuida dos painéis que a diretoria abre toda segunda de manhã. Você vai escrever SQL, limpar planilha que chegou torta e montar visualização que responde uma pergunta de negócio por vez. Metade do trabalho é técnico; a outra metade é descobrir o que a pessoa que pediu o relatório realmente queria saber. Python é bem-vindo e não é obrigatório para se candidatar."
+  },
+  {
+    "id": "3",
+    "titulo": "Pessoa Desenvolvedora Mobile Pleno",
+    "empresa": "Nuvem Rosa",
+    "empresaSlug": "nuvem-rosa",
+    "area": "Mobile",
+    "senioridade": "Pleno",
+    "local": "Presencial · Olinda",
+    "aceitaIniciante": false,
+    "descricao": "O aplicativo da Nuvem Rosa está nas duas lojas e tem gente usando todo dia, então a vaga é para quem já publicou app e sabe o que acontece quando uma atualização quebra na mão de quem usa. A stack é React Native com Expo, testes em Detox e uma esteira de release que você vai ajudar a arrumar. Pedimos dois anos de experiência com mobile porque hoje não há ninguém sênior no time para revisar."
+  },
+  {
+    "id": "4",
+    "titulo": "Estágio em Design de Produto",
+    "empresa": "Nuvem Rosa",
+    "empresaSlug": "nuvem-rosa",
+    "area": "Design",
+    "senioridade": "Estágio",
+    "local": "Híbrido · Olinda",
+    "aceitaIniciante": true,
+    "descricao": "Estágio para quem está no meio da graduação e quer ver design virar tela de verdade. Você vai acompanhar entrevista com usuário, refazer fluxo que ninguém entendeu na primeira tentativa e manter a biblioteca de componentes em dia com o que o time de front já construiu. Pedimos portfólio com dois projetos, mesmo que sejam de sala de aula, e disponibilidade de trinta horas semanais."
+  },
+  {
+    "id": "5",
+    "titulo": "Pessoa Desenvolvedora Back-end Júnior",
+    "empresa": "Maré Viva",
+    "empresaSlug": "mare-viva",
+    "area": "Back-end",
+    "senioridade": "Júnior",
+    "local": "Remoto",
+    "aceitaIniciante": true,
+    "descricao": "A Maré Viva atende clínicas, e por isso a nossa API não pode cair no meio de um atendimento. Você vai escrever endpoint em Node com TypeScript, entender por que um índice no banco muda uma consulta de quatro segundos para quarenta milissegundos e aprender a ler log sem pânico. Ninguém aqui espera que você já saiba: espera que você pergunte, escreva teste e não suba nada na sexta à noite."
+  },
+  {
+    "id": "6",
+    "titulo": "Analista de QA Júnior",
+    "empresa": "Maré Viva",
+    "empresaSlug": "mare-viva",
+    "area": "QA",
+    "senioridade": "Júnior",
+    "local": "Híbrido · Recife",
+    "aceitaIniciante": true,
+    "descricao": "Testar aqui não é clicar em tudo até quebrar: é descobrir onde vale olhar primeiro. Você vai escrever caso de teste a partir do que o produto promete, automatizar o caminho crítico em Playwright e conversar com quem desenvolveu sem transformar bug em acusação. Quem vem de suporte ou de atendimento costuma se dar muito bem nesta vaga, porque já sabe ouvir relato mal contado."
+  },
+  {
+    "id": "7",
+    "titulo": "Pessoa Desenvolvedora Front-end Pleno",
+    "empresa": "Maré Viva",
+    "empresaSlug": "mare-viva",
+    "area": "Front-end",
+    "senioridade": "Pleno",
+    "local": "Remoto",
+    "aceitaIniciante": false,
+    "descricao": "Vaga para quem já sustentou uma aplicação em produção e sabe a diferença entre uma tela que funciona na demonstração e uma tela que aguenta conexão ruim de consultório. Você vai cuidar do desempenho do agendamento, revisar o código de quem está começando e ajudar a decidir o que NÃO construir. Pedimos três anos de experiência com React e vontade de escrever documentação que alguém leia."
+  },
+  {
+    "id": "8",
+    "titulo": "Estágio em Dados",
+    "empresa": "Farol Digital",
+    "empresaSlug": "farol-digital",
+    "area": "Dados",
+    "senioridade": "Estágio",
+    "local": "Presencial · Recife",
+    "aceitaIniciante": true,
+    "descricao": "Você entra no time que mede se as campanhas da agência funcionaram ou se só pareceram funcionar. O trabalho é extrair dado de várias fontes, juntar com cuidado e desconfiar do número bonito antes de mandar para o cliente. Vai aprender SQL de verdade, planilha sem vergonha e o básico de estatística que separa tendência de acaso. Exigimos matrícula ativa e curiosidade com pergunta chata."
+  },
+  {
+    "id": "9",
+    "titulo": "Pessoa Desenvolvedora Front-end Estágio",
+    "empresa": "Farol Digital",
+    "empresaSlug": "farol-digital",
+    "area": "Front-end",
+    "senioridade": "Estágio",
+    "local": "Híbrido · Recife",
+    "aceitaIniciante": true,
+    "descricao": "Primeiro emprego em tecnologia, com acompanhamento de verdade: você vai começar arrumando detalhe de layout, depois montar página inteira e, no fim do semestre, entregar um pedaço de produto que alguém usa. A stack é HTML, CSS e React, nessa ordem de importância para nós. Não pedimos experiência nem projeto no GitHub: pedimos que você saiba explicar uma coisa que aprendeu na semana passada."
+  },
+  {
+    "id": "10",
+    "titulo": "Pessoa Desenvolvedora Back-end Pleno",
+    "empresa": "Jangada Pay",
+    "empresaSlug": "jangada-pay",
+    "area": "Back-end",
+    "senioridade": "Pleno",
+    "local": "Remoto",
+    "aceitaIniciante": false,
+    "descricao": "Dinheiro de outra pessoa passa pelo código que você vai escrever, e isso muda tudo: aqui um erro não é um chamado, é um estorno. Você vai trabalhar com Go, fila e idempotência, e vai passar mais tempo pensando no que fazer quando a integração responde duas vezes do que no caminho em que tudo dá certo. Pedimos experiência anterior com sistema financeiro ou com integração de terceiro que erra."
+  },
+  {
+    "id": "11",
+    "titulo": "Analista de QA Pleno",
+    "empresa": "Jangada Pay",
+    "empresaSlug": "jangada-pay",
+    "area": "QA",
+    "senioridade": "Pleno",
+    "local": "Remoto",
+    "aceitaIniciante": false,
+    "descricao": "Você vai desenhar a estratégia de teste de um produto de pagamento: o que é automatizado, o que é conferido na mão e o que a gente aceita descobrir em produção com alerta. Também vai ajudar quem desenvolve a testar melhor, em vez de virar o gargalo no fim da esteira. Pedimos três anos na área e experiência em montar cenário de teste para regra de negócio que ninguém escreveu direito."
+  },
+  {
+    "id": "12",
+    "titulo": "Pessoa Desenvolvedora Mobile Júnior",
+    "empresa": "Jangada Pay",
+    "empresaSlug": "jangada-pay",
+    "area": "Mobile",
+    "senioridade": "Júnior",
+    "local": "Híbrido · Recife",
+    "aceitaIniciante": true,
+    "descricao": "O aplicativo é a única porta de entrada do nosso cliente, então cada tela sua vai ser vista por muita gente. Você vai mexer em React Native com alguém revisando, aprender a testar em aparelho antigo de propósito e entender por que acessibilidade em app não é enfeite. Aceitamos quem está migrando de carreira e já construiu alguma coisa que roda no próprio celular, mesmo que seja pequena."
+  }
+]

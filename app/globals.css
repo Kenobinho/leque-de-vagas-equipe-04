@@ -1,26 +1,191 @@
-@import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+/* CSS comum, sem framework: Tailwind só entra na aula 08 do curso.
+   Uma folha só para o projeto inteiro, com classes que as páginas usam por
+   nome — o suficiente para a tela não atrapalhar quem está aprendendo. */
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  background: #09090b;
+  color: #fafafa;
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+}
+
+a { color: inherit; }
+
+/* ---------- moldura ---------- */
+
+.cabecalho {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  padding: 16px;
+  border-bottom: 1px solid #27272a;
+  flex-wrap: wrap;
+}
+.cabecalho nav { display: flex; gap: 12px; flex-wrap: wrap; }
+
+.menu-link { color: #a1a1aa; text-decoration: none; }
+.menu-link.ativo { color: #fafafa; font-weight: 600; }
+
+.conteudo { max-width: 720px; margin: 0 auto; padding: 32px 16px; }
+.rodape { padding: 16px; border-top: 1px solid #27272a; color: #a1a1aa; }
+
+.secao {
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  font-size: 12px;
+  color: #a1a1aa;
+}
+
+/* ---------- listas de vaga ---------- */
+
+.lista { list-style: none; padding: 0; display: grid; gap: 12px; }
+.lista li a {
+  display: block;
+  padding: 14px 16px;
+  border: 1px solid #27272a;
+  border-radius: 12px;
+  text-decoration: none;
+  color: inherit;
+}
+.lista li a:hover { border-color: #52525b; }
+.lista li a span { display: block; color: #a1a1aa; font-size: 14px; }
+
+.selo {
+  display: inline-block;
+  font-size: 13px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #14532d;
+  color: #bbf7d0;
+}
+
+.numeros { color: #a1a1aa; font-size: 14px; }
+
+/* ---------- filtros e abas (aula 03) ---------- */
+
+.filtros { display: grid; gap: 12px; margin: 16px 0; }
+.filtros input {
+  padding: 10px 12px;
+  border: 1px solid #27272a;
+  border-radius: 10px;
+  background: #18181b;
+  color: inherit;
+  font: inherit;
+}
+
+.chips { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.chip, .chips li {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border: 1px solid #27272a;
+  border-radius: 999px;
+  background: transparent;
+  color: #a1a1aa;
+  font: inherit;
+  cursor: pointer;
+}
+.chip.ativo { border-color: #fafafa; color: #fafafa; }
+
+.abas { display: flex; gap: 8px; margin: 16px 0; }
+.aba {
+  padding: 8px 14px;
+  border: 1px solid #27272a;
+  border-radius: 10px;
+  background: transparent;
+  color: #a1a1aa;
+  font: inherit;
+  cursor: pointer;
+}
+.aba.ativa { border-color: #fafafa; color: #fafafa; font-weight: 600; }
+
+/* ---------- descrição e formulário (aula 03) ---------- */
+
+.descricao button, .formulario button, .aviso button, .ok button {
+  margin-top: 8px;
+  padding: 8px 14px;
+  border: 1px solid #3f3f46;
+  border-radius: 10px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+.formulario button:disabled { opacity: .5; cursor: not-allowed; }
+
+.formulario { display: grid; gap: 12px; margin-top: 8px; }
+.formulario label { display: grid; gap: 4px; font-size: 14px; color: #a1a1aa; }
+.formulario input {
+  padding: 10px 12px;
+  border: 1px solid #27272a;
+  border-radius: 10px;
+  background: #18181b;
+  color: #fafafa;
+  font: inherit;
+}
+
+.erro { color: #fda4af; font-size: 14px; margin: 0; }
+.ok { padding: 16px; border: 1px solid #14532d; border-radius: 12px; }
+
+/* ---------- avisos, espera e texto legal ---------- */
+
+.aviso { padding: 24px; border: 1px dashed #3f3f46; border-radius: 12px; }
+.tecnico { font-family: ui-monospace, monospace; font-size: 12px; color: #71717a; }
+
+.skeleton {
+  height: 72px;
+  border-radius: 12px;
+  background: #18181b;
+  animation: pulsa 1.2s ease-in-out infinite;
+}
+@keyframes pulsa { 50% { opacity: .5; } }
+
+.texto-legal { max-width: 60ch; }
+
+/* Rótulo que existe para o leitor de tela e não para os olhos. */
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* ---------- esperas visíveis (aula 04) ----------
+   O dado passou a vir de fora, e com isso apareceu a espera. Todo esqueleto
+   daqui existe para ocupar MAIS OU MENOS a altura do conteúdo real: se o
+   fallback é menor, a página pula quando o dado chega, e o dedo de quem já ia
+   clicar acerta outra coisa. */
+
+.esqueleto { display: grid; gap: 10px; }
+
+.barra {
+  height: 16px;
+  border-radius: 6px;
+  background: #18181b;
+  animation: pulsa 1.2s ease-in-out infinite;
+}
+.barra.titulo { height: 30px; max-width: 60%; }
+.barra.curta { max-width: 35%; }
+
+.cartao-esqueleto {
+  height: 76px;
+  border-radius: 12px;
+  background: #18181b;
+  animation: pulsa 1.2s ease-in-out infinite;
+}
+
+/* O fallback dos números: mesma altura da linha real, para a listagem de
+   baixo não se mexer no instante em que a contagem chega. */
+.numeros.esqueleto {
+  display: block;
+  height: 22px;
+  max-width: 320px;
+  border-radius: 6px;
+  background: #18181b;
+  animation: pulsa 1.2s ease-in-out infinite;
 }

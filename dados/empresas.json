@@ -1,0 +1,32 @@
+[
+  {
+    "slug": "aurora-tech",
+    "nome": "Aurora Tech",
+    "sobre": "Produto próprio na área de logística, 60 pessoas, sede no Recife e time distribuído pelo Nordeste inteiro. Contrata pessoas em início de carreira desde 2021 e mantém um programa de mentoria interna.",
+    "site": "https://aurora.exemplo.br"
+  },
+  {
+    "slug": "nuvem-rosa",
+    "nome": "Nuvem Rosa",
+    "sobre": "Estúdio de aplicativos com escritório em Olinda. Trabalha por projeto para clientes de saúde e educação, com times pequenos de três a cinco pessoas e entrega quinzenal.",
+    "site": "https://nuvemrosa.exemplo.br"
+  },
+  {
+    "slug": "mare-viva",
+    "nome": "Maré Viva",
+    "sobre": "Software de agendamento para clínicas, usado por consultório pequeno em vinte cidades. Time de 25 pessoas, remoto desde o primeiro dia, com encontro presencial no Recife a cada trimestre.",
+    "site": "https://mareviva.exemplo.br"
+  },
+  {
+    "slug": "farol-digital",
+    "nome": "Farol Digital",
+    "sobre": "Agência de marketing digital no Porto Digital que mantém a própria equipe de tecnologia. É a porta de entrada de muita gente na área: metade do time começou ali como pessoa estagiária.",
+    "site": "https://farol.exemplo.br"
+  },
+  {
+    "slug": "jangada-pay",
+    "nome": "Jangada Pay",
+    "sobre": "Meio de pagamento para negócio pequeno, com 40 pessoas e operação 24 por 7. Exige mais experiência que as outras empresas desta lista, e por isso boa parte das vagas dela não aceita quem está começando.",
+    "site": "https://jangadapay.exemplo.br"
+  }
+]
