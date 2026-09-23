@@ -15,8 +15,10 @@ export default function AbasDaEmpresa({ sobre }: { sobre: string }) {
 
                 <button
                     onClick={() => setAbaAtiva("vagas")}
-                    style={{ fontWeight: abaAtiva === "vagas" ? "bold" : "normal" }}></button>
-                Vagas publicadas
+                    style={{ fontWeight: abaAtiva === "vagas" ? "bold" : "normal" }}
+                >
+                    Vagas publicadas
+                </button>
             </div>
 
             <div style={{ marginTop: "20px" }}>
