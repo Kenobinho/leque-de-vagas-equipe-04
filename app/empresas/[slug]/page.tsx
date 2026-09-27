@@ -1,5 +1,4 @@
 import { notFound } from "next/navigation";
-import { empresas } from "@/data/empresas";
 import AbasDaEmpresa from "@/components/AbasDaEmpresa";
 
 type Props = {
@@ -8,27 +7,40 @@ type Props = {
     }>;
 };
 
+async function buscarEmpresa(slug: string) {
+    await new Promise((resolve) => setTimeout(resolve, 2000)); // Simula um atraso de 2 segundos
+
+
+    const resposta = await fetch("http://localhost:3000/dados/empresas.json", {
+        next: { revalidate: 60, tags: ["empresas"] }
+    });
+
+    if (!resposta.ok) return null;
+
+    const empresas = await resposta.json();
+    return empresas.find((e: any) => e.slug === slug);
+}
+
 export async function generateMetadata({ params }: Props) {
     const { slug } = await params;
+    const empresa = await buscarEmpresa(slug);
 
-    const empresa = empresas.find((e) => e.slug === slug);
     if (!empresa) {
         return {
-            title: "Empresa não encontrada!",
+            title: "Empresa não encontrada",
+            description: "A empresa que você está procurando não foi encontrada."
         };
     }
 
     return {
-        title: `Empresa: ${empresa.nome} | Leque de Vagas`,
-        description: `${empresa.sobre}`,
+        title: `${empresa.nome} - Leque de Vagas`,
+        description: empresa.sobre
     };
 }
-
-
-
-export default async function PaginaDaEmpresa({ params }: Props) {
+export default async function PerfilDaEmpresa({ params }: Props) {
     const { slug } = await params;
-    const empresa = empresas.find((e) => e.slug === slug);
+    const empresa = await buscarEmpresa(slug);
+    
     if (!empresa) {
         notFound();
     }
@@ -36,11 +48,11 @@ export default async function PaginaDaEmpresa({ params }: Props) {
     return (
         <main style={{ padding: "20px" }}>
             <h1>{empresa.nome}</h1>
-            <AbasDaEmpresa sobre={empresa.sobre} />
+            <p>{empresa.sobre}</p>
             <a href={empresa.site} target="_blank" rel="noreferrer">
-                Acessar site da empresa
+                Visitar site da empresa
             </a>
-
+            <AbasDaEmpresa sobre={empresa.sobre} />
         </main>
     );
 }
