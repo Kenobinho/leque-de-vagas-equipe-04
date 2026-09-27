@@ -13,3 +13,10 @@ export interface Vaga {
     faixaSalarial: string;
     urgencia: boolean;
 }
+
+export type Empresa = {
+  slug: string;
+  nome: string;
+  sobre: string;
+  site: string;
+};

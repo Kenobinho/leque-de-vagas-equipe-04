@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import { Empresa } from "@/lib/tipos";
 import AbasDaEmpresa from "@/components/AbasDaEmpresa";
 
 type Props = {
@@ -8,21 +9,20 @@ type Props = {
 };
 
 async function buscarEmpresa(slug: string) {
-    await new Promise((resolve) => setTimeout(resolve, 2000)); // Simula um atraso de 2 segundos
 
-
-    const resposta = await fetch("http://localhost:3000/dados/empresas.json", {
+    const resposta = await fetch("https://raw.githubusercontent.com/Kenobinho/leque-de-vagas-equipe-04/refs/heads/empresas-fetch/dados/empresas.json", {
         next: { revalidate: 60, tags: ["empresas"] }
     });
 
     if (!resposta.ok) return null;
 
     const empresas = await resposta.json();
-    return empresas.find((e: any) => e.slug === slug);
+    return empresas.find((e: Empresa) => e.slug === slug);
 }
 
 export async function generateMetadata({ params }: Props) {
     const { slug } = await params;
+
     const empresa = await buscarEmpresa(slug);
 
     if (!empresa) {
@@ -40,16 +40,16 @@ export async function generateMetadata({ params }: Props) {
 export default async function PerfilDaEmpresa({ params }: Props) {
     const { slug } = await params;
     const empresa = await buscarEmpresa(slug);
-    
+
     if (!empresa) {
         notFound();
     }
 
     return (
-        <main style={{ padding: "20px" }}>
-            <h1>{empresa.nome}</h1>
+        <main className="container-empresa">
+            <h1 className="titulo-empresa">{empresa.nome}</h1>
             <p>{empresa.sobre}</p>
-            <a href={empresa.site} target="_blank" rel="noreferrer">
+            <a className="link-site" href={empresa.site} target="_blank" rel="noreferrer">
                 Visitar site da empresa
             </a>
             <AbasDaEmpresa sobre={empresa.sobre} />

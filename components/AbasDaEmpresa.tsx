@@ -3,31 +3,33 @@ import { useState } from "react";
 export default function AbasDaEmpresa({ sobre }: { sobre: string }) {
     const [abaAtiva, setAbaAtiva] = useState("sobre");
 
+    // Dentro do seu return no componente de abas:
     return (
-        <div style={{ marginTop: "20px" }}>
-            <div style={{ display: "flex", gap: "10px", borderBottom: "1px solid #ccc", paddingBottom: "10px" }}>
+        <div className="container-abas">
+            <div className="botoes-aba">
                 <button
                     onClick={() => setAbaAtiva("sobre")}
-                    style={{ fontWeight: abaAtiva === "sobre" ? "bold" : "normal" }}
+                    className={`btn-aba ${abaAtiva === "sobre" ? "btn-aba-ativo" : "btn-aba-inativo"}`}
                 >
                     Sobre a empresa
                 </button>
 
                 <button
                     onClick={() => setAbaAtiva("vagas")}
-                    style={{ fontWeight: abaAtiva === "vagas" ? "bold" : "normal" }}
+                    className={`btn-aba ${abaAtiva === "vagas" ? "btn-aba-ativo" : "btn-aba-inativo"}`}
                 >
                     Vagas publicadas
                 </button>
             </div>
 
-            <div style={{ marginTop: "20px" }}>
+            {/* O conteúdo da aba vem aqui embaixo */}
+            <div>
                 {abaAtiva === "sobre" ? (
                     <p>{sobre}</p>
                 ) : (
-                    <p>As vagas desta empresa irão aparecer aqui em breve!</p>
+                    <p>Lista de vagas aparecerá aqui.</p>
                 )}
             </div>
         </div>
-    );
-}
+    )
+};
