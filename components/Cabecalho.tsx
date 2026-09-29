@@ -11,6 +11,7 @@ export default function Cabecalho() {
       <nav className="flex gap-6">
         <MenuLink href="/">Início</MenuLink>
         <MenuLink href="/vagas">Vagas</MenuLink>
+        <MenuLink href="/busca">Buscar</MenuLink>
       </nav>
     </header>
   );
