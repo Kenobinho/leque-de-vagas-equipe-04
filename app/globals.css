@@ -24,3 +24,290 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* ===================================================
+   Estilos do Rodapé (Footer)
+   =================================================== */
+
+.rodape {
+  background-color: #f9fafb; /* Fundo claro (cinza suave) */
+  color: #374151;            /* Texto cinza escuro */
+  border-top: 1px solid #e5e7eb;
+  padding: 32px 24px;
+  margin-top: auto;          /* Garante que fique no final */
+  font-family: inherit;
+}
+
+.rodape-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Linha superior: Marca/Descrição e Navegação */
+.rodape-superior {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.rodape-marca {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111827;
+  text-decoration: none;
+}
+
+.rodape-marca:hover {
+  color: #2563eb;
+}
+
+.rodape-descricao {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-top: 4px;
+}
+
+/* Links de Navegação */
+.rodape-nav {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.rodape-link {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #4b5563;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.rodape-link:hover {
+  color: #2563eb;
+  text-decoration: underline;
+}
+
+/* Linha inferior: Divisória e Copyright */
+.rodape-divisor {
+  border: 0;
+  border-top: 1px solid #e5e7eb;
+  margin: 0;
+}
+
+.rodape-inferior {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8125rem;
+  color: #9ca3af;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* Responsividade para telas menores (celular) */
+@media (max-width: 640px) {
+  .rodape-superior {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .rodape-nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .rodape-inferior {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* ===================================================
+   Estilos da Página 404 (Not Found)
+   =================================================== */
+
+.not-found-secao {
+  max-width: 640px;
+  margin: 40px auto;
+  padding: 48px 32px;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.not-found-cabecalho {
+  margin-bottom: 16px;
+}
+
+.not-found-badge {
+  display: inline-block;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  background-color: #fee2e2;
+  color: #b91c1c;
+  margin-bottom: 12px;
+}
+
+.not-found-titulo {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #111827;
+  line-height: 1.2;
+}
+
+.not-found-descricao {
+  font-size: 1rem;
+  color: #4b5563;
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+
+/* Links de Navegação / Botões */
+.not-found-navegacao {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.not-found-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.not-found-btn.principal {
+  background-color: #18181b;
+  color: #ffffff;
+}
+
+.not-found-btn.principal:hover {
+  background-color: #27272a;
+}
+
+.not-found-btn.secundario {
+  background-color: #f4f4f5;
+  color: #27272a;
+  border: 1px solid #e4e4e7;
+}
+
+.not-found-btn.secundario:hover {
+  background-color: #e4e4e7;
+  color: #09090b;
+}
+
+/* Responsividade para celular */
+@media (max-width: 640px) {
+  .not-found-secao {
+    padding: 32px 20px;
+    margin: 20px 16px;
+  }
+
+  .not-found-titulo {
+    font-size: 1.5rem;
+  }
+
+  .not-found-navegacao {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .not-found-btn {
+    width: 100%;
+  }
+}
+
+/* ===================================================
+   Estilos das Páginas Institucionais (Termos e Privacidade)
+   =================================================== */
+
+.institucional-fundo {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 48px 24px;
+  margin: 0 auto;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.institucional-largura {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.institucional-artigo {
+  color: #1f2937;
+  font-family: inherit;
+}
+
+.institucional-cabecalho {
+  border-bottom: 2px solid #f3f4f6;
+  padding-bottom: 24px;
+  margin-bottom: 32px;
+}
+
+.institucional-titulo {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #111827;
+  letter-spacing: -0.025em;
+  margin-bottom: 8px;
+}
+
+.institucional-atualizacao {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.institucional-secao {
+  margin-bottom: 32px;
+}
+
+.institucional-subtitulo {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 12px;
+}
+
+.institucional-paragrafo {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #4b5563;
+}
+
+/* Responsividade para mobile */
+@media (max-width: 640px) {
+  .institucional-fundo {
+    padding: 24px 16px;
+    border-radius: 8px;
+  }
+
+  .institucional-titulo {
+    font-size: 1.75rem;
+  }
+
+  .institucional-subtitulo {
+    font-size: 1.125rem;
+  }
+}
