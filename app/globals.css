@@ -310,4 +310,83 @@ body {
   .institucional-subtitulo {
     font-size: 1.125rem;
   }
+
+
+
+
+
+
+/* temporario! */
+
+
+
+
+
+
+
+/* Estilos da Frente 2 - Perfil da Empresa */
+.container-empresa {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+  font-family: system-ui, sans-serif;
+  color: #e5e7eb; /* Texto claro para fundo escuro */
+}
+
+.titulo-empresa {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
+
+.link-site {
+  display: inline-block;
+  margin-bottom: 2rem;
+  color: #60a5fa;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.link-site:hover {
+  text-decoration: underline;
+}
+
+/* Estilos das Abas */
+.container-abas {
+  background-color: #1f2937; /* Fundo do cartão escuro */
+  border-radius: 12px;
+  padding: 24px;
+  border: 1px solid #374151;
+}
+
+.botoes-aba {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid #374151;
+  padding-bottom: 12px;
+}
+
+.btn-aba {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.btn-aba-ativo {
+  background-color: #3b82f6; /* Azul de destaque */
+  color: white;
+}
+
+.btn-aba-inativo {
+  background-color: transparent;
+  color: #9ca3af;
+}
+
+.btn-aba-inativo:hover {
+  background-color: #374151;
+  color: #f3f4f6;
 }
