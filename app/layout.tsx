@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Cabecalho from "@/components/Cabecalho";
+import Rodape from "@/components/Rodape";
 
 export const metadata: Metadata = {
   title: "Leque de Vagas",
@@ -14,7 +15,8 @@ export default function RootLayout({  children,}: Readonly<{  children: React.Re
         <Cabecalho />
         <main className="p-8">
           {children}
-        </main> 
+        </main>
+        <Rodape /> 
       </body>
     </html>
   );
