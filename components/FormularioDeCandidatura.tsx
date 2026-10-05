@@ -15,7 +15,8 @@ export default function FormularioDeCandidatura({
   const [habilidades, setHabilidades] = useState<string[]>([]);
   const [enviada, setEnviada] = useState(false);
 
-  const emailValido = email.includes("@");
+  const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const emailValido = regexEmail.test(email.trim());
   const podeEnviar = nome !== "" && emailValido && habilidades.length > 0;
 
   function adicionarHabilidade() {
@@ -25,12 +26,10 @@ export default function FormularioDeCandidatura({
     }
   }
 
-  function removerHabilidade(itemParaRemover: string) {
-    const listaFiltrada = habilidades.filter(function (item) {
-      return item !== itemParaRemover;
-    });
-    setHabilidades(listaFiltrada);
-  }
+  function removerHabilidade(indexParaRemover: number) {
+  const listaFiltrada = habilidades.filter((_, index) => index !== indexParaRemover);
+  setHabilidades(listaFiltrada);
+}
 
   function enviarFormulario(event: SubmitEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -89,10 +88,10 @@ export default function FormularioDeCandidatura({
             </div>
 
             <ul>
-            {habilidades.map((item) => (
-                <li key={item}>
+            {habilidades.map((item, index) => (
+                <li key={index}>
                 {item}{" "}
-                <button type="button" onClick={() => removerHabilidade(item)}>
+                <button type="button" onClick={() => removerHabilidade(index)}>
                     X
                 </button>
                 </li>
