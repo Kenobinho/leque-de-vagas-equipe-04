@@ -15,7 +15,7 @@ export default function FormularioEdicao({ sobreAtual }: { sobreAtual: string })
             <h2 style={{ color: "white", marginBottom: "16px", fontSize: "1.2rem" }}>Editar descrição da empresa</h2>
 
             <form action={acaoDoForm} style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
-                <textarea
+                <textarea aria-label="Descrição da empresa"
                     name="sobre"
                     defaultValue={sobreAtual}
                     rows={4}
