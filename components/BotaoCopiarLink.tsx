@@ -14,7 +14,16 @@ export default function BotaoCopiarLink() {
   return (
     <button 
       onClick={copiarLink} 
-      className="bg-zinc-800 hover:bg-zinc-700 text-zinc-200 text-xs px-4 py-2 rounded-lg transition-colors font-medium cursor-pointer"
+      style={{
+        backgroundColor: "#27272a",
+        color: "#e4e4e7",
+        fontSize: "12px",
+        padding: "8px 16px",
+        borderRadius: "8px",
+        fontWeight: "bold",
+        border: "none",
+        cursor: "pointer"
+      }}
     >
       {copiado ? "✓ Link copiado" : "Copiar link"}
     </button>
