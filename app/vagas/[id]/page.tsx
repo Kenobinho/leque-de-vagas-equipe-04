@@ -3,6 +3,7 @@ import Link from "next/link";
 import { vagas } from "@/data/vagas";
 import DescricaoDaVaga from "@/components/DescricaoDaVaga";
 import BotaoCopiarLink from "@/components/BotaoCopiarLink";
+// import FormularioDeCandidatura from "@/components/FormularioDeCandidatura";
 
 export default async function PaginaDaVaga({
   params,
@@ -17,71 +18,63 @@ export default async function PaginaDaVaga({
   }
 
   return (
-    <main className="max-w-3xl mx-auto py-10 px-4">
-      <Link 
-        href="/vagas" 
-        className="inline-flex items-center text-sm text-zinc-400 hover:text-white mb-6 transition-colors"
-      >
+    <main style={{ maxWidth: "768px", margin: "0 auto", padding: "40px 16px", fontFamily: "sans-serif", color: "#e4e4e7" }}>
+      <Link href="/vagas" style={{ display: "inline-block", fontSize: "14px", color: "#a1a1aa", textDecoration: "none", marginBottom: "24px" }}>
         ← Voltar para listagem
       </Link>
 
-      <article className="bg-zinc-900 border border-zinc-800 rounded-2xl p-8 shadow-xl">
-        <div className="flex flex-wrap gap-2 mb-3">
-          <span className="bg-zinc-800 text-zinc-300 text-xs px-3 py-1 rounded-full font-medium">
-            {vaga.area}
-          </span>
-          <span className="bg-zinc-800 text-zinc-300 text-xs px-3 py-1 rounded-full font-medium">
-            {vaga.senioridade}
-          </span>
-          <span className="bg-zinc-800 text-zinc-300 text-xs px-3 py-1 rounded-full font-medium">
-            {vaga.modalidade}
-          </span>
-        </div>  
+      <article style={{ backgroundColor: "#18181b", border: "1px solid #27272a", borderRadius: "16px", padding: "32px", boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.1)" }}>  
+        <div style={{ display: "flex", gap: "8px", marginBottom: "12px", flexWrap: "wrap" }}>
+          <span style={{ backgroundColor: "#27272a", color: "#d4d4d8", fontSize: "12px", padding: "4px 12px", borderRadius: "9999px", fontWeight: "bold" }}>{vaga.area}</span>
+          <span style={{ backgroundColor: "#27272a", color: "#d4d4d8", fontSize: "12px", padding: "4px 12px", borderRadius: "9999px", fontWeight: "bold" }}>{vaga.senioridade}</span>
+          <span style={{ backgroundColor: "#27272a", color: "#d4d4d8", fontSize: "12px", padding: "4px 12px", borderRadius: "9999px", fontWeight: "bold" }}>{vaga.modalidade}</span>
+        </div>
 
-        <h1 className="text-3xl font-extrabold text-white mb-2">{vaga.titulo}</h1>
-        
-        <p className="text-base text-zinc-300 mb-6 flex items-center gap-2">
-          <strong className="text-white">{vaga.empresa}</strong> · {vaga.local} 
-          · <Link href={`/empresas/${vaga.empresaSlug}`} className="text-blue-400 hover:underline text-sm">
-            Ver perfil corporativo →
-          </Link>
+        <h1 style={{ fontSize: "28px", fontWeight: "900", color: "#ffffff", margin: "0 0 8px 0" }}>{vaga.titulo}</h1>
+
+        <p style={{ fontSize: "16px", color: "#d4d4d8", margin: "0 0 24px 0" }}>
+          <strong style={{ color: "#ffffff" }}>{vaga.empresa}</strong> · {vaga.local}
         </p>
 
-        <div className="grid grid-cols-2 gap-4 bg-zinc-950/60 p-4 rounded-xl border border-zinc-800/80 mb-8">
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px", backgroundColor: "rgba(9, 9, 11, 0.6)", padding: "16px", borderRadius: "12px", border: "1px solid rgba(39, 39, 42, 0.8)", marginBottom: "32px" }}>
           <div>
-            <span className="block text-xs text-zinc-500 uppercase font-semibold">Faixa Salarial</span>
-            <span className="text-sm font-semibold text-zinc-200">{vaga.faixaSalarial}</span>
+            <span style={{ display: "block", fontSize: "12px", color: "#71717a", textTransform: "uppercase", fontWeight: "bold" }}>Faixa Salarial</span>
+            <span style={{ fontSize: "14px", fontWeight: "bold", color: "#e4e4e7" }}>{vaga.faixaSalarial}</span>
           </div>
           <div>
-            <span className="block text-xs text-zinc-500 uppercase font-semibold">Contratação</span>
-            <span className="text-sm font-semibold text-zinc-200">{vaga.urgencia ? "Urgente" : "Padrão"}</span>
+            <span style={{ display: "block", fontSize: "12px", color: "#71717a", textTransform: "uppercase", fontWeight: "bold" }}>Contratação</span>
+            <span style={{ fontSize: "14px", fontWeight: "bold", color: "#e4e4e7" }}>{vaga.urgencia ? "Urgente" : "Padrão"}</span>    
           </div>
         </div>
 
-        <div className="mb-8">
-          <h3 className="text-sm font-bold text-zinc-400 uppercase tracking-wider mb-3">Benefícios Oferecidos</h3>
-          <ul className="flex flex-wrap gap-2">
+        <div style={{ marginBottom: "32px" }}>
+          <h3 style={{ fontSize: "14px", fontWeight: "bold", color: "#a1a1aa", textTransform: "uppercase", letterSpacing: "0.05em", margin: "0 0 12px 0" }}>Benefícios Oferecidos</h3>
+          <ul style={{ display: "flex", flexWrap: "wrap", gap: "8px", listStyle: "none", padding: 0, margin: 0 }}>
             {vaga.beneficios.map((beneficio, index) => (
-              <li key={index} className="bg-zinc-800/70 border border-zinc-700/50 text-zinc-300 text-xs px-3 py-1.5 rounded-lg">
+              <li key={index} style={{ backgroundColor: "rgba(39, 39, 42, 0.7)", border: "1px solid rgba(63, 63, 70, 0.5)", color: "#d4d4d8", fontSize: "12px", padding: "6px 12px", borderRadius: "8px" }}>
                 {beneficio}
               </li> 
             ))}
           </ul>
         </div>
 
-        <div className="mb-8 border-t border-zinc-800 pt-6">
-          <h3 className="text-sm font-bold text-zinc-400 uppercase tracking-wider mb-3">Sobre a Vaga</h3>
-          <div className="text-zinc-300 leading-relaxed text-sm">
+        <div style={{ borderTop: "1px solid #27272a", paddingTop: "24px", marginBottom: "32px" }}>
+          <h3 style={{ fontSize: "14px", fontWeight: "bold", color: "#a1a1aa", textTransform: "uppercase", letterSpacing: "0.05em", margin: "0 0 12px 0" }}>Sobre a Vaga</h3>
+          <div style={{ color: "#d4d4d8", lineHeight: "1.6", fontSize: "14px" }}>
+            {/* O SEU COMPONENTE CLIENTE ENTRA AQUI! */}
             <DescricaoDaVaga texto={vaga.descricao} />
           </div>
         </div>
 
-        <div className="border-t border-zinc-800 pt-6 flex justify-between items-center">
-          <span className="text-xs text-zinc-500">
+        <div style={{ borderTop: "1px solid #27272a", paddingTop: "24px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+          <span style={{ fontSize: "12px", color: "#71717a" }}>
             {vaga.aceitaIniciante ? "✨ Vaga aberta para iniciantes" : "Requer experiência prévia"}
           </span>
+          {/* E O SEU OUTRO COMPONENTE CLIENTE ENTRA AQUI! */}
           <BotaoCopiarLink />
         </div>
+
+        {/* <FormularioDeCandidatura tituloDaVaga={vaga.titulo} /> */}
       </article>
     </main>
   );

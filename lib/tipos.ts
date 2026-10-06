@@ -20,3 +20,7 @@ export type Empresa = {
   sobre: string;
   site: string;
 };
+
+export type Candidatura = {
+  id: string;
+};
