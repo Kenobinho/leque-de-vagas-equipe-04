@@ -1,4 +1,4 @@
-export interface Vaga {
+export type Vaga = {
     id: string;
     titulo: string;
     empresa: string;
