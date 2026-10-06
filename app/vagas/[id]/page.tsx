@@ -1,17 +1,35 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { vagas } from "@/data/vagas";
+import { listarVagas, buscarVaga } from "@/lib/api";
 import DescricaoDaVaga from "@/components/DescricaoDaVaga";
 import BotaoCopiarLink from "@/components/BotaoCopiarLink";
-import FormularioDeCandidatura from "@/components/FormularioDeCandidatura";
+// import FormularioDeCandidatura from "@/components/FormularioDeCandidatura";
 
-export default async function PaginaDaVaga({
-  params,
-}: {
+type Props = {
   params: Promise<{ id: string }>;
-}) {
+};
+
+export async function generateStaticParams() {
+  const vagas = await listarVagas();
+  return vagas.map((vaga) => ({ id: String(vaga.id) }));
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { id } = await params;
-  const vaga = vagas.find((v) => v.id === id);
+  const vaga = await buscarVaga(id);
+
+  if (!vaga) return { title: "Vaga não encontrada · Leque de Vagas" };
+
+  return {
+    title: `\({vaga.titulo} ·\){vaga.empresa}`,
+    description: vaga.descricao.slice(0, 150),
+  };
+}
+
+export default async function PaginaDaVaga({ params }: Props) {
+  const { id } = await params;
+  const vaga = await buscarVaga(id);
 
   if (!vaga) {
     notFound();
@@ -74,10 +92,7 @@ export default async function PaginaDaVaga({
           <BotaoCopiarLink />
         </div>
 
-        <section className="border-t border-zinc-800 pt-8 mt-8">
-          <h2 className="text-xl font-bold text-white mb-4">Candidatar-se a esta vaga</h2>
-          <FormularioDeCandidatura tituloDaVaga={vaga.titulo} />
-        </section>
+        {/* <FormularioDeCandidatura tituloDaVaga={vaga.titulo} /> */}
       </article>
     </main>
   );
