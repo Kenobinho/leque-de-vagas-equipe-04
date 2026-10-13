@@ -76,6 +76,9 @@ export default function MuralDeVagas({ vagas }: MuralDeVagasProps) {
     return true;
   });
 
+  const aceitamIniciante = visiveis.filter(v => v.aceitaIniciante).length;
+
+
   return (
     <div className="mural-grid">
       
@@ -110,13 +113,25 @@ export default function MuralDeVagas({ vagas }: MuralDeVagasProps) {
         {/* Contagem em tempo real */}
         <div style={{ display: "flex", justifyContent: "space-between", color: "#a1a1aa", fontSize: "0.875rem" }}>
           <p>
-            <strong style={{ color: "#000000" }}>{visiveis.length}</strong> de {vagas.length} vagas encontradas
+            <strong style={{ color: "#000000" }}>{visiveis.length}</strong> de {vagas.length} vagas encontradas • 
+            <strong style={{ color: "#000000" }}> {aceitamIniciante}</strong>  aceitam iniciantes
           </p>
         </div>
 
         {/* Lista de Vagas */}
         <div style={{ display: "grid", gap: "16px" }}>
-          {visiveis.map((vaga) => (
+          {visiveis.length === 0 ? (
+            <div className="mural-vazio">
+              <p className="mural-vazio-titulo">Nenhuma vaga encontrada</p>
+              <p className="mural-vazio-texto">
+                Não encontramos nenhuma vaga com esses filtros. Tente alterar os critérios.
+              </p>
+              <button type="button" onClick={limparFiltros} className="mural-vazio-botao">
+                Limpar filtros
+              </button>
+            </div>
+          ) : (
+            visiveis.map((vaga) => (
               <Link 
                 key={vaga.id} 
                 href={`/vagas/${vaga.id}`}
@@ -148,8 +163,9 @@ export default function MuralDeVagas({ vagas }: MuralDeVagasProps) {
                     </span>
                   )}
                 </div>
-            </Link>
-          ))}
+              </Link>
+            ))
+          )}
         </div>
 
       </div>
