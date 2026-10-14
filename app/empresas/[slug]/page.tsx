@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { Empresa } from "@/lib/tipos";
 import AbasDaEmpresa from "@/components/AbasDaEmpresa";
+import FormularioEdicao from "./FormularioEdicao";
 
 type Props = {
     params: Promise<{
@@ -22,7 +23,6 @@ async function buscarEmpresa(slug: string) {
 
 export async function generateMetadata({ params }: Props) {
     const { slug } = await params;
-
     const empresa = await buscarEmpresa(slug);
 
     if (!empresa) {
@@ -46,12 +46,14 @@ export default async function PerfilDaEmpresa({ params }: Props) {
     }
 
     return (
-        <main className="container-empresa">
-            <h1 className="titulo-empresa">{empresa.nome}</h1>
+        <main>
+            <h1>{empresa.nome}</h1>
             <p>{empresa.sobre}</p>
-            <a className="link-site" href={empresa.site} target="_blank" rel="noreferrer">
+            <a href={empresa.site} target="_blank" rel="noreferrer">
                 Visitar site da empresa
             </a>
+
+            <FormularioEdicao sobreAtual={empresa.sobre} />
             <AbasDaEmpresa sobre={empresa.sobre} />
         </main>
     );

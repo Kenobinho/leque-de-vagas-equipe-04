@@ -19,9 +19,6 @@ export default function NotFound() {
                 <Link href="/vagas" className="not-found-btn secundario">
                 Ver Vagas Abertas
                 </Link>
-                <Link href="/busca" className="not-found-btn secundario">
-                Fazer uma Busca
-                </Link>
             </nav>            
         </section>
     )

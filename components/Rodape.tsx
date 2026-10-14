@@ -24,9 +24,6 @@ export default function Rodape() {
                     <li>
                         <Link href="/vagas" className="rodape-link">Vagas</Link>
                     </li>
-                    <li>
-                        <Link href="/busca" className="rodape-link">Buscar</Link>
-                    </li>
                 </ul>
             </nav>
         </section>

@@ -1,0 +1,227 @@
+[
+    {
+        "id": "1",
+        "titulo": "Desenvolvedor Front-end",
+        "empresa": "Tech Solutions",
+        "empresaSlug": "tech-solutions",
+        "local": "Remoto",
+        "descricao": "Estamos procurando um desenvolvedor front-end talentoso para se juntar à nossa equipe. O candidato ideal terá experiência com React, Next.js e Tailwind CSS.",
+        "area": "Front-end",
+        "senioridade": "Pleno",
+        "aceitaIniciante": true,
+        "modalidade": "CLT",
+        "beneficios": [
+            "Gympass",
+            "Plano de Saúde"
+        ],
+        "faixaSalarial": "R$ 4.000 - R$ 6.000",
+        "urgencia": true
+    },
+    {
+        "id": "2",
+        "titulo": "Analista de Dados",
+        "empresa": "Data Insights",
+        "empresaSlug": "data-insights",
+        "local": "São Paulo, SP",
+        "descricao": "Procuramos um analista de dados para interpretar grandes volumes de dados e fornecer insights acionáveis. Experiência com SQL, Python e ferramentas de visualização é essencial.",
+        "area": "Dados",
+        "senioridade": "Júnior",
+        "aceitaIniciante": true,
+        "modalidade": "PJ",
+        "beneficios": [
+            "Vale Refeição",
+            "Vale Transporte"
+        ],
+        "faixaSalarial": "R$ 5.000 - R$ 7.000",
+        "urgencia": false
+    },
+    {
+        "id": "3",
+        "titulo": "Engenheiro de Software",
+        "empresa": "Innovatech",
+        "empresaSlug": "innovatech",
+        "local": "Belo Horizonte, MG",
+        "descricao": "Estamos em busca de um engenheiro de software experiente para desenvolver soluções escaláveis. Conhecimento em Java, Spring Boot e microserviços é necessário.",
+        "area": "Back-end",
+        "senioridade": "Pleno",
+        "aceitaIniciante": true,
+        "modalidade": "CLT",
+        "beneficios": [
+            "Plano de Saúde",
+            "Vale Alimentação",
+            "Gympass"
+        ],
+        "faixaSalarial": "R$ 7.000 - R$ 10.000",
+        "urgencia": true
+    },
+    {
+        "id": "4",
+        "titulo": "Designer UX/UI",
+        "empresa": "Creative Minds",
+        "empresaSlug": "creative-minds",
+        "local": "Curitiba, PR",
+        "descricao": "Buscamos um designer UX/UI criativo para melhorar a experiência do usuário em nossos produtos digitais. Experiência com Figma, Adobe XD e prototipagem é desejável.",
+        "area": "Design",
+        "senioridade": "Pleno",
+        "aceitaIniciante": true,
+        "modalidade": "Freelance",
+        "beneficios": [
+            "Flexibilidade de Horário"
+        ],
+        "faixaSalarial": "R$ 3.000 - R$ 5.000",
+        "urgencia": false
+    },
+    {
+        "id": "5",
+        "titulo": "Gerente de Projetos",
+        "empresa": "Global Tech",
+        "empresaSlug": "global-tech",
+        "local": "Rio de Janeiro, RJ",
+        "descricao": "Estamos procurando um gerente de projetos experiente para liderar equipes e garantir a entrega de projetos dentro do prazo e orçamento. Certificação PMP é um diferencial.",
+        "area": "Gestão",
+        "senioridade": "Sênior",
+        "aceitaIniciante": false,
+        "modalidade": "CLT",
+        "beneficios": [
+            "Plano de Saúde",
+            "Vale Refeição",
+            "Bônus por Performance"
+        ],
+        "faixaSalarial": "R$ 8.000 - R$ 12.000",
+        "urgencia": true
+    },
+    {
+        "id": "6",
+        "titulo": "Especialista em Marketing Digital",
+        "empresa": "MarketPro",
+        "empresaSlug": "marketpro",
+        "local": "Porto Alegre, RS",
+        "descricao": "Procuramos um especialista em marketing digital para desenvolver e implementar estratégias de marketing online. Experiência com SEO, Google Ads e redes sociais é essencial.",
+        "area": "Marketing",
+        "senioridade": "Pleno",
+        "aceitaIniciante": true,
+        "modalidade": "PJ",
+        "beneficios": [
+            "Vale Transporte",
+            "Vale Refeição",
+            "Plano de Saúde"
+        ],
+        "faixaSalarial": "R$ 4.500 - R$ 6.500",
+        "urgencia": false
+    },
+    {
+        "id": "7",
+        "titulo": "Cientista de Dados",
+        "empresa": "DataLab",
+        "empresaSlug": "datalab",
+        "local": "Florianópolis, SC",
+        "descricao": "Estamos em busca de um cientista de dados para analisar grandes conjuntos de dados e desenvolver modelos preditivos. Experiência com machine learning, Python e R é necessária.",
+        "area": "Dados",
+        "senioridade": "Sênior",
+        "aceitaIniciante": false,
+        "modalidade": "CLT",
+        "beneficios": [
+            "Plano de Saúde",
+            "Vale Alimentação",
+            "Gympass"
+        ],
+        "faixaSalarial": "R$ 9.000 - R$ 13.000",
+        "urgencia": true
+    },
+    {
+        "id": "8",
+        "titulo": "Administrador de Sistemas",
+        "empresa": "SysAdmin Corp",
+        "empresaSlug": "sysadmin-corp",
+        "local": "Recife, PE",
+        "descricao": "Procuramos um administrador de sistemas para gerenciar e manter nossa infraestrutura de TI. Experiência com Linux, Windows Server e virtualização é essencial.",
+        "area": "Infraestrutura",
+        "senioridade": "Pleno",
+        "aceitaIniciante": true,
+        "modalidade": "CLT",
+        "beneficios": [
+            "Vale Transporte",
+            "Plano de Saúde",
+            "Vale Refeição",
+            "Gympass"
+        ],
+        "faixaSalarial": "R$ 5.000 - R$ 7.000",
+        "urgencia": false
+    },
+    {
+        "id": "9",
+        "titulo": "Especialista em Segurança da Informação",
+        "empresa": "SecureTech",
+        "empresaSlug": "securetech",
+        "local": "São Paulo, SP",
+        "descricao": "Estamos procurando um especialista em segurança da informação para proteger nossos sistemas e dados. Experiência com firewalls, criptografia e políticas de segurança é necessária.",
+        "area": "Infraestrutura",
+        "senioridade": "Sênior",
+        "aceitaIniciante": false,
+        "modalidade": "CLT",
+        "beneficios": [
+            "Plano de Saúde",
+            "Vale Refeição",
+            "Gympass"
+        ],
+        "faixaSalarial": "R$ 8.000 - R$ 12.000",
+        "urgencia": true
+    },
+    {
+        "id": "10",
+        "titulo": "Desenvolvedor Mobile",
+        "empresa": "AppMasters",
+        "empresaSlug": "appmasters",
+        "local": "Belo Horizonte, MG",
+        "descricao": "Procuramos um desenvolvedor mobile para criar aplicativos inovadores para iOS e Android. Experiência com Swift, Kotlin e React Native é essencial.",
+        "area": "Mobile",
+        "senioridade": "Pleno",
+        "aceitaIniciante": true,
+        "modalidade": "PJ",
+        "beneficios": [
+            "Vale Transporte",
+            "Vale Refeição"
+        ],
+        "faixaSalarial": "R$ 6.000 - R$ 9.000",
+        "urgencia": false
+    },
+    {
+        "id": "11",
+        "titulo": "Arquiteto de Soluções",
+        "empresa": "CloudTech",
+        "empresaSlug": "cloudtech",
+        "local": "João Pessoa, PB",
+        "descricao": "Estamos em busca de um arquiteto de soluções para projetar e implementar arquiteturas de software escaláveis. Experiência com AWS, Azure e microserviços é necessária.",
+        "area": "Infraestrutura",
+        "senioridade": "Sênior",
+        "aceitaIniciante": false,
+        "modalidade": "CLT",
+        "beneficios": [
+            "Plano de Saúde",
+            "Vale Refeição",
+            "Gympass"
+        ],
+        "faixaSalarial": "R$ 10.000 - R$ 15.000",
+        "urgencia": true
+    },
+    {
+        "id": "12",
+        "titulo": "Especialista em Inteligência Artificial",
+        "empresa": "AI Innovations",
+        "empresaSlug": "ai-innovations",
+        "local": "Curitiba, PR",
+        "descricao": "Procuramos um especialista em inteligência artificial para desenvolver modelos de aprendizado de máquina e soluções baseadas em IA. Experiência com Python, TensorFlow e PyTorch é essencial.",
+        "area": "IA",
+        "senioridade": "Sênior",
+        "aceitaIniciante": false,
+        "modalidade": "PJ",
+        "beneficios": [
+            "Vale Transporte",
+            "Vale Refeição",
+            "Plano de Saúde",
+            "Gympass"
+        ],
+        "faixaSalarial": "R$ 12.000 - R$ 18.000",
+        "urgencia": false
+    }
+]
