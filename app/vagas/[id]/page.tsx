@@ -4,7 +4,7 @@ import Link from "next/link";
 import { listarVagas, buscarVaga } from "@/lib/api";
 import DescricaoDaVaga from "@/components/DescricaoDaVaga";
 import BotaoCopiarLink from "@/components/BotaoCopiarLink";
-// import FormularioDeCandidatura from "@/components/FormularioDeCandidatura";
+import FormularioDeCandidatura from "@/components/FormularioDeCandidatura";
 
 type Props = {
   params: Promise<{ id: string }>;
@@ -93,6 +93,10 @@ export default async function PaginaDaVaga({ params }: Props) {
         </div>
 
         {/* <FormularioDeCandidatura tituloDaVaga={vaga.titulo} /> */}
+        <section className="border-t border-zinc-800 pt-8 mt-8">
+          <h2 className="text-xl font-bold text-white mb-4">Candidatar-se a esta vaga</h2>
+          <FormularioDeCandidatura tituloDaVaga={vaga.titulo} />
+        </section>
       </article>
     </main>
   );
